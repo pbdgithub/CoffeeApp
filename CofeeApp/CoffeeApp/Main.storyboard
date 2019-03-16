@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MhU-7z-gHj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="axb-Ek-aX7">
+            <objects>
+                <viewController id="MhU-7z-gHj" customClass="ViewController" customModule="CoffeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4iP-2l-ZFM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-9b-nxL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXU-Eq-xoA">
+                                        <rect key="frame" x="147" y="66" width="81" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-p6-uYT">
+                                                <rect key="frame" x="15" y="65.5" width="51" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="p5l-p6-uYT" firstAttribute="centerY" secondItem="kXU-Eq-xoA" secondAttribute="centerY" id="J0X-0e-LNX"/>
+                                            <constraint firstAttribute="height" constant="150" id="iS1-Co-XS9"/>
+                                            <constraint firstItem="p5l-p6-uYT" firstAttribute="centerX" secondItem="kXU-Eq-xoA" secondAttribute="centerX" id="lTk-kv-ezQ"/>
+                                            <constraint firstAttribute="width" constant="81" id="oYS-Bq-Je5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kXU-Eq-xoA" firstAttribute="top" secondItem="rWe-9b-nxL" secondAttribute="top" constant="66" id="Nq5-B7-6QH"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-iZ-Zec">
+                                <rect key="frame" x="0.0" y="292" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCells" id="e0J-7D-uCb">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e0J-7D-uCb" id="SWI-P5-9NG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MhU-7z-gHj" id="VMO-oe-IqG"/>
+                                    <outlet property="delegate" destination="MhU-7z-gHj" id="aQE-Cd-3J4"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------ Hot Deals On Coffee ------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-bZ-Z6t">
+                                <rect key="frame" x="79" y="246" width="217" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Smx-Xc-wBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.472732296" green="0.20727470680000001" blue="0.15894881390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xk5-bZ-Z6t" firstAttribute="centerX" secondItem="j2r-U0-eJK" secondAttribute="centerX" id="HYn-59-Mry"/>
+                            <constraint firstItem="rWe-9b-nxL" firstAttribute="height" secondItem="j2r-U0-eJK" secondAttribute="height" id="HiC-uw-GaI"/>
+                            <constraint firstItem="8nz-iZ-Zec" firstAttribute="leading" secondItem="j2r-U0-eJK" secondAttribute="leading" id="JX8-JB-JmO"/>
+                            <constraint firstItem="rWe-9b-nxL" firstAttribute="leading" secondItem="j2r-U0-eJK" secondAttribute="leading" id="bfR-Gw-rUG"/>
+                            <constraint firstItem="rWe-9b-nxL" firstAttribute="top" secondItem="j2r-U0-eJK" secondAttribute="top" id="f3h-EU-g6m"/>
+                            <constraint firstItem="rWe-9b-nxL" firstAttribute="trailing" secondItem="j2r-U0-eJK" secondAttribute="trailing" id="gt1-Ci-3RZ"/>
+                            <constraint firstItem="xk5-bZ-Z6t" firstAttribute="top" secondItem="kXU-Eq-xoA" secondAttribute="bottom" constant="10" id="nuw-Th-uDV"/>
+                            <constraint firstItem="8nz-iZ-Zec" firstAttribute="top" secondItem="xk5-bZ-Z6t" secondAttribute="bottom" constant="25" id="pQX-Hv-afN"/>
+                            <constraint firstItem="kXU-Eq-xoA" firstAttribute="centerX" secondItem="j2r-U0-eJK" secondAttribute="centerX" id="t2d-KL-EVc"/>
+                            <constraint firstItem="8nz-iZ-Zec" firstAttribute="bottom" secondItem="j2r-U0-eJK" secondAttribute="bottom" id="y8K-eZ-gYl"/>
+                            <constraint firstItem="8nz-iZ-Zec" firstAttribute="trailing" secondItem="j2r-U0-eJK" secondAttribute="trailing" id="yU5-FI-Upc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j2r-U0-eJK"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoView" destination="kXU-Eq-xoA" id="4lF-fs-H4Z"/>
+                        <outlet property="tableView" destination="8nz-iZ-Zec" id="HYt-rl-yVv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEj-sD-hPW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="ERN-L1-S7W">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="yPS-vZ-8dc" customClass="DetailViewController" customModule="CoffeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nJU-oL-pAX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUf-xd-sAB">
+                                <rect key="frame" x="16" y="39" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="B9e-QW-crb"/>
+                                    <constraint firstAttribute="width" constant="40" id="Pq4-pf-q8B"/>
+                                </constraints>
+                                <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="backAction:" destination="yPS-vZ-8dc" eventType="touchUpInside" id="Jui-iy-VFg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sf1-jM-xTQ">
+                                <rect key="frame" x="112" y="113" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3GJ-Yw-qJc"/>
+                                    <constraint firstAttribute="width" constant="150" id="uBY-Rm-nui"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gj-dL-eZF">
+                                <rect key="frame" x="137" y="271" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoffeeDescription" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtU-Fm-c4P">
+                                <rect key="frame" x="34" y="300" width="306" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="kvz-pp-2oo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoffeePrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9r-ea-9fI">
+                                <rect key="frame" x="142.5" y="409" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-rI-6tl">
+                                <rect key="frame" x="87.5" y="439" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.472732296" green="0.20727470680000001" blue="0.15894881390000001" alpha="0.76947623239999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L7h-9m-7gH"/>
+                                    <constraint firstAttribute="width" constant="200" id="wiC-Uy-ck5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="orderAction:" destination="yPS-vZ-8dc" eventType="touchUpInside" id="s0m-nd-TmZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92941176469999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sf1-jM-xTQ" firstAttribute="leading" secondItem="Nwt-UB-mhM" secondAttribute="leading" constant="112" id="34p-qz-A7w"/>
+                            <constraint firstItem="Nwt-UB-mhM" firstAttribute="bottom" secondItem="Lqd-rI-6tl" secondAttribute="bottom" constant="178" id="LrV-vO-9BB"/>
+                            <constraint firstItem="sf1-jM-xTQ" firstAttribute="top" secondItem="Nwt-UB-mhM" secondAttribute="top" constant="93" id="QZ2-uM-pT2"/>
+                            <constraint firstItem="Nwt-UB-mhM" firstAttribute="trailing" secondItem="vtU-Fm-c4P" secondAttribute="trailing" constant="35" id="acq-rU-fes"/>
+                            <constraint firstItem="5Gj-dL-eZF" firstAttribute="top" secondItem="sf1-jM-xTQ" secondAttribute="bottom" constant="8" id="gqI-bq-JM2"/>
+                            <constraint firstItem="f9r-ea-9fI" firstAttribute="centerX" secondItem="nJU-oL-pAX" secondAttribute="centerX" id="hIe-7t-TgT"/>
+                            <constraint firstItem="Lqd-rI-6tl" firstAttribute="centerX" secondItem="f9r-ea-9fI" secondAttribute="centerX" id="hlB-mh-uLF"/>
+                            <constraint firstItem="Lqd-rI-6tl" firstAttribute="top" secondItem="f9r-ea-9fI" secondAttribute="bottom" constant="9" id="pu9-we-PF0"/>
+                            <constraint firstItem="uUf-xd-sAB" firstAttribute="top" secondItem="Nwt-UB-mhM" secondAttribute="top" constant="19" id="rCb-w2-QH3"/>
+                            <constraint firstItem="uUf-xd-sAB" firstAttribute="leading" secondItem="Nwt-UB-mhM" secondAttribute="leading" constant="16" id="szG-XU-CCl"/>
+                            <constraint firstItem="5Gj-dL-eZF" firstAttribute="centerX" secondItem="nJU-oL-pAX" secondAttribute="centerX" id="waz-s9-MGx"/>
+                            <constraint firstItem="vtU-Fm-c4P" firstAttribute="top" secondItem="5Gj-dL-eZF" secondAttribute="bottom" constant="8" id="wks-vv-voL"/>
+                            <constraint firstItem="vtU-Fm-c4P" firstAttribute="leading" secondItem="Nwt-UB-mhM" secondAttribute="leading" constant="34" id="ya2-3z-kfZ"/>
+                            <constraint firstItem="Nwt-UB-mhM" firstAttribute="trailing" secondItem="sf1-jM-xTQ" secondAttribute="trailing" constant="113" id="z5w-Vt-Yb0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nwt-UB-mhM"/>
+                    </view>
+                    <connections>
+                        <outlet property="coffeeDescription" destination="vtU-Fm-c4P" id="y5U-pq-5Jq"/>
+                        <outlet property="coffeeImage" destination="sf1-jM-xTQ" id="bCe-lW-4qG"/>
+                        <outlet property="coffeeName" destination="5Gj-dL-eZF" id="VXQ-ef-KIQ"/>
+                        <outlet property="coffeePrice" destination="f9r-ea-9fI" id="ede-F5-aR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jk-3A-CDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Close" width="96" height="96"/>
+    </resources>
+</document>
